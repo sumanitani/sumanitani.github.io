@@ -1,1 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhD Researcher | University of New Hampshire</title>
+    <meta name="description" content="Academic research website for [Your Name], PhD Student at UNH.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- UNH INSPIRED COLOR PALETTE --- */
+        :root {
+            --unh-blue: #003594; /* Official UNH Blue */
+            --unh-gray: #555555;
+            --light-bg: #f4f7f6;
+            --white: #ffffff;
+            --accent: #D6001C; /* Slight accent for links */
+        }
 
+        /* --- BASIC RESET & LAYOUT --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Merriweather', serif;
+            color: var(--unh-blue);
+            margin-bottom: 1rem;
+        }
+
+        a { color: var(--unh-blue); text-decoration: none; font-weight: bold; }
+        a:hover { color: var(--accent); text-decoration: underline; }
+
+        /* --- CONTAINER --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: var(--white);
+            box-shadow: 0 0 15px rgba(0,0,0,0.05);
+            min-height: 100vh;
+        }
+
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--unh-blue);
+        }
+        
+        header h1 { font-size: 2.5rem; margin-bottom: 5px; }
+        .subtitle { font-size: 1.2rem; color: var(--unh-gray); }
+
+        /* --- NAVIGATION --- */
+        nav {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: var(--unh-gray);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        nav a:hover { color: var(--unh-blue); }
+
+        /* --- SECTIONS --- */
+        section { padding: 40px 0; border-bottom: 1px solid #eee; }
+
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid var(--unh-blue);
+            flex-shrink: 0;
+        }
+
+        /* --- PUBLICATION LIST STYLE --- */
+        .paper { margin-bottom: 15px; }
+        .paper-title { font-weight: bold; font-size: 1.1rem; }
+        .paper-journal { font-style: italic; color: var(--unh-gray); }
+
+        /* --- GALLERY GRID (NEW) --- */
+        .gallery-grid {
+            display: grid;
+            /* Auto-fit creates columns based on screen width */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background: #fff;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px; /* Forces all images to be the same height */
+            object-fit: cover; /* Crops the image neatly to fit */
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+            cursor: pointer;
+        }
+        
+        .caption {
+            font-size: 0.85rem;
+            color: #666;
+            padding: 8px;
+            text-align: center;
+        }
+
+        /* --- CONTACT --- */
+        .contact-list { list-style: none; }
+        .contact-list li { margin-bottom: 10px; }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 600px) {
+            .profile-section { flex-direction: column; align-items: center; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Your Name</h1>
+            
+            <p class="subtitle">PhD Candidate in [Your Field] <br> University of New Hampshire</p>
+            
+            <nav>
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+                <a href="cv.pdf" target="_blank">CV</a>
+            </nav>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="profile-section">
+                <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+                
+                <div>
+                    <p>
+                        Hello! I am a PhD student at the <a href="https://www.unh.edu/">University of New Hampshire</a>, working in the Department of [Your Dept]. My research focuses on [Topic A], [Topic B], and [Topic C].
+                    </p>
+                    <br>
+                    <p>
+                        I use techniques such as [Method 1] and [Method 2] to investigate [Problem you solve]. Prior to UNH, I received my BSc from [Previous University].
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li><strong>Topic One:</strong> Description of this research area.</li>
+                <li><strong>Topic Two:</strong> Description of this research area.</li>
+                <li><strong>Topic Three:</strong> Description of this research area.</li>
+            </ul>
+        </section>
+
+        <section id="publications">
+            <h2>Publications</h2>
+            
+            <div class="paper">
+                <div class="paper-title">1. Title of Your Most Recent Paper</div>
+                <div class="paper-journal">Journal of Important Research, 2025</div>
+                <a href="#">[PDF]</a> <a href="#">[DOI]</a>
+            </div>
+
+            <div class="paper">
+                <div class="paper-title">2. Title of Another Paper</div>
+                <div class="paper-journal">Proceedings of the International Conference, 2024</div>
+                <a href="#">[PDF]</a> <a href="#">[Link]</a>
+            </div>
+            
+            <p><em>See my <a href="#">Google Scholar</a> profile for a full list.</em></p>
+        </section>
+
+        <section id="gallery">
+            <h2>PhD Journey</h2>
+            <p>Snapshots from my time at UNH, conferences, and lab work.</p>
+            
+            <div class="gallery-grid">
+                
+                <div class="gallery-item">
+                    <img src="photos/lab.jpg" alt="Working in the lab">
+                    <div class="caption">Setting up the equipment</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="photos/conf.jpg" alt="Conference Presentation">
+                    <div class="caption">Presenting at Conference</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="photos/campus.jpg" alt="UNH Campus">
+                    <div class="caption">Durham in Winter</div>
+                </div>
+                
+                </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>I am always open to collaboration and discussing new research ideas.</p>
+            <br>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> your.email@unh.edu</li>
+                <li><strong>Office:</strong> Kingsbury Hall, Room 123</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></li>
+                <li><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourname</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Your Name. Hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
