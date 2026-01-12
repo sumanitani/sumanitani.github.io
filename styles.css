@@ -1,0 +1,133 @@
+/* styles.css */
+
+/* --- VARIABLES (The UNH Brand) --- */
+:root {
+    --primary: #003594; /* UNH Blue */
+    --secondary: #202020; /* Dark Gray for text */
+    --accent: #D6001C; /* UNH Red for highlights */
+    --light: #f8f9fa; /* Off-white background */
+    --white: #ffffff;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for 3D effect */
+}
+
+/* --- GLOBAL RESET --- */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Roboto', sans-serif; /* Clean, modern font */
+    color: var(--secondary);
+    background-color: var(--light);
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif; /* Professional serif for headings */
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+
+/* --- NAVIGATION BAR (Professional Sticky Header) --- */
+.navbar {
+    background: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    font-family: 'Merriweather', serif;
+}
+
+.nav-links { display: flex; gap: 30px; }
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    padding-bottom: 5px;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+}
+
+/* --- HERO SECTION (The "Big" Intro) --- */
+.hero {
+    background: linear-gradient(rgba(0, 53, 148, 0.9), rgba(0, 53, 148, 0.8)), url('photos/campus.jpg'); /* Adds blue tint over image */
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.hero h1 { color: var(--white); font-size: 3rem; margin-bottom: 10px; }
+.hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px auto; opacity: 0.9; }
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent);
+    color: var(--white);
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.btn:hover { background: #b00017; transform: translateY(-2px); }
+
+/* --- MAIN CONTENT LAYOUT --- */
+.container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 0 20px;
+    flex: 1; /* Pushes footer down */
+}
+
+/* --- GRID SYSTEM FOR RESEARCH/GALLERY --- */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+/* --- CARDS (For Research/Papers) --- */
+.card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+
+/* --- FOOTER --- */
+footer {
+    background: #1a1a1a;
+    color: #aaa;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: auto;
+}
+footer a { color: var(--white); }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Mobile menu simplified for now */
+    .grid-2 { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 2rem; }
+}
