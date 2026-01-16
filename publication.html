@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Suman Itani</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* --- Internal CSS for Publications --- */
+        
+        .pub-list {
+            max-width: 900px;
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+        
+        .pub-item {
+            background: white;
+            border-bottom: 1px solid #eee;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .pub-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .pub-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .pub-year {
+            background-color: #003366; /* Your theme dark blue */
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        
+        .citation-badge {
+            background-color: #f0f0f0;
+            color: #555;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            border: 1px solid #ddd;
+        }
+
+        .pub-title {
+            font-family: 'Merriweather', serif;
+            font-size: 1.35rem;
+            color: #222;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .pub-journal {
+            color: #003366;
+            font-style: italic;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Interactive Elements */
+        details {
+            margin-top: 15px;
+            background-color: #fafafa;
+            border-radius: 5px;
+            border: 1px solid #eee;
+            padding: 10px;
+        }
+
+        summary {
+            font-weight: bold;
+            color: #0056b3;
+            cursor: pointer;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        summary:hover {
+            text-decoration: underline;
+        }
+
+        .abstract-text {
+            margin-top: 10px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .pub-links {
+            margin-top: 15px;
+        }
+
+        .btn-small {
+            display: inline-block;
+            text-decoration: none;
+            background: #eee;
+            color: #333;
+            padding: 6px 14px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 10px;
+            transition: all 0.2s;
+            font-weight: 500;
+        }
+
+        .btn-small:hover {
+            background: #003366;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Suman Itani</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="research.html">Research</a>
+            <a href="publication.html" class="active">Publications</a>
+            <a href="media.html">Media</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="min-height: 35vh; display: flex; flex-direction: column; justify-content: center;">
+        <h1>Publications</h1>
+        <p>Condensed Matter Physics &bull; AI &bull; Material Informatics</p>
+    </header>
+
+    <section class="container pub-list">
+
+        <article class="pub-item">
+            <div class="pub-header">
+                <span class="pub-year">2025</span>
+                <span class="citation-badge">Cited by 9</span>
+            </div>
+            <h2 class="pub-title">The northeast materials database for magnetic materials</h2>
+            <div class="pub-authors">
+                <strong>S. Itani</strong>, Y. Zhang, J. Zang
+            </div>
+            <span class="pub-journal">Nature Communications 16 (1), 9415</span>
+            
+            <div class="pub-links">
+                <a href="#" class="btn-small">PDF</a>
+                <a href="#" class="btn-small">DOI</a>
+                <a href="#" class="btn-small">Database Link</a>
+            </div>
+
+            <details>
+                <summary>Show Abstract</summary>
+                <div class="abstract-text">
+                    [Abstract text not provided in source. Please paste the abstract for "The northeast materials database for magnetic materials" here.]
+                </div>
+            </details>
+        </article>
+
+        <article class="pub-item">
+            <div class="pub-header">
+                <span class="pub-year">2025</span>
+                <span class="citation-badge">Cited by 11</span>
+            </div>
+            <h2 class="pub-title">Large language model-driven database for thermoelectric materials</h2>
+            <div class="pub-authors">
+                <strong>S. Itani</strong>, Y. Zhang, J. Zang
+            </div>
+            <span class="pub-journal">Computational Materials Science 253, 113855</span>
+            
+            <div class="pub-links">
+                <a href="#" class="btn-small">PDF</a>
+                <a href="#" class="btn-small">DOI</a>
+            </div>
+
+            <details>
+                <summary>Show Abstract</summary>
+                <div class="abstract-text">
+                    [Abstract text not provided in source. Please paste the abstract for "Large language model-driven database for thermoelectric materials" here.]
+                </div>
+            </details>
+        </article>
+
+        <article class="pub-item">
+            <div class="pub-header">
+                <span class="pub-year">2025</span>
+            </div>
+            <h2 class="pub-title">Large Language Models for Superconductor Discovery</h2>
+            <div class="pub-authors">
+                <strong>S. Itani</strong>, Y. Zhang, R. Itani, J. Zang
+            </div>
+            <span class="pub-journal">arXiv preprint arXiv:2512.10847</span>
+            
+            <div class="pub-links">
+                <a href="#" class="btn-small">PDF</a>
+                <a href="#" class="btn-small">arXiv Link</a>
+            </div>
+
+            <details>
+                <summary>Show Abstract</summary>
+                <div class="abstract-text">
+                    [Abstract text not provided in source. Please paste the abstract for "Large Language Models for Superconductor Discovery" here.]
+                </div>
+            </details>
+        </article>
+
+        <article class="pub-item">
+            <div class="pub-header">
+                <span class="pub-year">2024</span>
+                <span class="citation-badge">Cited by 17</span>
+            </div>
+            <h2 class="pub-title">GPTArticleExtractor: An automated workflow for magnetic material database construction</h2>
+            <div class="pub-authors">
+                Y. Zhang, <strong>S. Itani</strong>, K. Khanal, E. Okyere, G. Smith, K. Takahashi, J. Zang
+            </div>
+            <span class="pub-journal">Journal of Magnetism and Magnetic Materials 597, 172001</span>
+            
+            <div class="pub-links">
+                <a href="#" class="btn-small">PDF</a>
+                <a href="#" class="btn-small">DOI</a>
+                <a href="#" class="btn-small">GitHub</a>
+            </div>
+
+            <details>
+                <summary>Show Abstract</summary>
+                <div class="abstract-text">
+                    [Abstract text not provided in source. Please paste the abstract for "GPTArticleExtractor" here.]
+                </div>
+            </details>
+        </article>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Suman Itani. University of New Hampshire.</p>
+    </footer>
+
+</body>
+</html>
